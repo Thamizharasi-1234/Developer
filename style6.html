@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+header{
+            display: flex;
+            background-color: blue;
+       }
+        .first{
+            list-style-type: none;
+            display: flex;
+            width: 60%
+        }
+        .first li
+        {
+            width: 15%
+        }
+        .first li a
+        {
+            color: white;
+            text-decoration: none;
+        }
+        .first li a:hover{
+            color: hotpink;
+        }
+
+    h1{
+            padding: 0;
+            margin: 0;
+            color: white;
+            width: 30%;
+            margin-top: 5px;
+            text-indent: 7px;
+    }
+    
+        .fa-brands
+        {
+            font-size: 30px;
+            width: 9%;
+            padding-top: 10px;
+    }
+        .one
+        {
+            color: white;
+        }
+        .two
+        {
+            color: purple
+        }
+        .three
+        {
+            color: hwb(0 0% 0%);
+        }
+        .main_para{
+            display: flex;
+        }
+        .first_para,.third_para{
+            flex: 1;
+        }
+        .second_para{
+        flex: 2;
+        margin: 0 1%;
+    }
+    .four{
+        display: none;
+    }
+    
+    
+    
+    @media only screen and (max-width: 480px){
+        .first,.fa-brands{
+            display: none;
+        }
+        .main_para{
+            flex-direction: column;
+        }
+        .four{
+            color: brown;
+            margin-left: 25vh;
+            margin-top: 10px;
+            font-size: 25px;
+            display: block;
+            }
+        </style>
+<body>
+    <header>
+    <h1>Mysterycode</h1>
+    <ul class="first">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">service</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">About</a></li>
+        </ul>
+        <i class="fa-brands one fa-square-twitter"></i>
+        <i class="fa-brands two fa-square-instagram"></i>
+        <i class="fa-brands three fa-square-youtube"></i>
+        <i class="fa-solid four fa-bars"></i>
+        </header>
+        <div class="main_para">
+            <section class="first_para"> 
+                <p style>Web development is creating, building, and maintaining websites to run efficiently on a browser. Web design, database management, and web programming are key aspects of the process.</p>
+            </section>
+            <section class="second_para">
+                <p style>CSS, or Cascading Style Sheets, is an important component of web design. With CSS, you can control how a website looks and feels. You get to choose the fonts, colors, and how the page is organized. It is often compared to the design of a house – where HTML is the foundation, CSS is the style that makes everything look appealing. From headings and paragraphs to images and tables, CSS styles all elements on a webpage. This way, websites can have a consing styles can pile up and sometimes override each other in unexpected ways. Managing these conflicts can be challenging. For example, if multiple rules apply to the same element, the most specific one will take precedence, which can lead to unforeseen issues if not managed properly.</p>
+</section>
+                <section class="third_para">
+                    <p>
+                        This happens because CSS is “cascading,” meaning styles can pile up and sometimes override each other in unexpected ways. Managing these conflicts can be challenging. For example, if multiple rules apply to the same element, the most specific one will take precedence, which can lead to unforeseen issues if not managed properly.</p>
+                    </section>
+                    
+        </div>
+    
+    
+</body>
+</html>
+
+        
