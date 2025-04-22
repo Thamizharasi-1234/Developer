@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function myprogram(){   //basic validation
+            // get the value from input
+            let frame = document.querySelector("#web").value;
+            let frame_2 = document.querySelector("#box").value;
+            let h2_ele = document.querySelector(".balance");
+            if(frame ==""){
+                alert("please entry your email id !!!!");
+                h2_ele.innerHTML = "please enter your email id";
+            }
+            else if(frame_2  ==""){
+                alert("please entry your password !!!!"); 
+                h2_ele.innerHTML = "please entry your password";
+            }else{
+                alert("login done");
+                h2_ele.innerHTML = "successfully login";
+            }
+        }
+
+        
+
+             
+
+            
+
+        
+
+    </script>
+
+    <style>
+        .one{
+            width: 40%;
+            height: 20px;
+            margin-top: 20px;
+            background-color: blanchedalmond;                     
+        }
+
+        
+
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <input id="web" class="one" placeholder="enter your email id" type="text">    
+    </div>
+
+    <div>
+        <input id="box" class="one" placeholder="enter your password" type="text">
+</div>
+
+<div>
+    <input  onclick="myprogram()" class="one" value="login" type="button">  
+
+</div>                                                           
+
+
+
+
+<h2 class="balance"></h2>          
+
+
+
+
+
+ 
+
+
+
+
+    
+</body>
+</html>
