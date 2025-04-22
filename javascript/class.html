@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // get element by class 
+        function mywindow(){
+            let my_source = document.getElementsByClassName("myweb");
+            console.log(my_source);
+            my_source[0].innerHTML = "hi hello"
+
+            // for(let i=0;i<my_source.length;i++){
+            //     my_source[i].innerHTML="hi hello" +i;
+            // } 
+        }
+
+        
+            
+
+        
+
+    </script>
+</head>
+<body>
+    
+<h3 class="myweb"></h3>
+<h3 class="myweb"></h3> 
+<h3 class="myweb"></h3>
+<h3 class="myweb"></h3>
+<h3 class="myweb"></h3> 
+
+
+
+<button onclick="mywindow()"> click me</button>
+    
+</body>
+</html>
