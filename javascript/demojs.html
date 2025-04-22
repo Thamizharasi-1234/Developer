@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myinfo(){ //basic validation
+            let work = document.querySelector("#data").value;
+            let source = document.querySelector("#source").value;
+            let h1_ele = document.querySelector(".link");
+            if(work == ""){
+                h1_ele.innerHTML="please enter your gpay number"
+            }
+            else if(source=""){
+                h1_ele.innerHTML="please enter your password correctly";
+            }else{
+                h1_ele.innerHTML="available balance 1,00,00,000";
+            }
+                
+            }
+        
+
+
+    </script>
+
+    <style>
+        .two{
+             width: 40%;
+            height: 20px;
+            margin-top: 20px;
+            background-color: blanchedalmond;                     
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <div>
+        <input id="data" class="two" placeholder="enter your gpay number" type="text">
+    </div>
+    <div>
+        <input id="source" class="two" placeholder="enter your password" type="text">
+    </div>
+    
+    <div>
+        <input onclick="myinfo()" class="two"  value="submit" type="button">
+    </div>
+    <h1 class="link"></h1>
+</body>
+</html>
