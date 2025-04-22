@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //to store the key and values , define with {} , no duplicate key are allowed 
+
+        let computerscience={
+            "semester1":"c",
+            "semester2":"c++",
+            "semester3":"java",
+            "semester4":"web development",
+            "semester5":"mobile application development",
+            "semester6":"python",
+ }
+ console.log(computerscience["semester5"]);    //get
+ console.log(computerscience);
+ computerscience["major1"]="operation search";     //adding 
+ console.log(computerscience);
+
+ //no normal for loop in object array
+    
+ for(let sem in computerscience){
+    console.log(sem,computerscience[sem]);  
+ }
+            
+        
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
