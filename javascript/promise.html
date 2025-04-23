@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //  async function getwork(){ // only one promise method in frontend  // getmethod
+        //  // await will wait till the response get from the server // fetch is promise method so await should declaore before
+        // let res = await fetch ("https://www.apirequest.in/user/api/",{"method":"GET"}); // we cannot declare async without await and await without async 
+        // console.log(res);
+        
+        // }
+        // getwork();
+
+          async function postwork(){
+            let infopass = {
+                "email":"TEST@gmail.com",
+                 "password":"pwd",
+                 "name":"sample name"
+            }
+            let ress = await fetch ("https://www.apirequest.in/user/api/",
+            {"method":"POST","body": JSON.stringify(infopass),"headers":{"content-type":"application/json"}});
+             console.log(ress);
+             if(ress.status == 200){
+                let last_ress = await ress.json();//to get the final response of server...
+                console.log(last_ress);
+             }else{
+                alert("error while calling server");
+             }
+             console.log(ress);  //   line 25 in if condition give  .ok to get true status 200 to 299 only in js and server accept as success 
+
+
+             
+        }
+       
+        
+
+        postwork();
+          
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
