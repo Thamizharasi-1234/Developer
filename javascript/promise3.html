@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function work(){
+            let frame = document.querySelector("#first").value;
+            let frame2=document.querySelector("#second").value;
+            let frame3=document.querySelector("#third").value;
+            let info = {
+                    "email":frame,
+                    "password":frame2,
+                     "name":frame3
+
+                    
+            }
+            
+        
+        let res = await fetch ("https://www.apirequest.in/user/api/",
+        {"method":"post","body":JSON.stringify(info),"headers":{"content-type":"application/json"}});
+        console.log(res);
+       if(res.ok){
+        let result_res = await res.json();
+        console.log(result_res);
+        document.querySelector("h2").innerHTML = result_res['msg']
+       }else{
+        alert("error while calling");
+       }
+       console.log(res);
+        }
+ </script>
+</head>
+<body>
+    <input id ="first" type="text" placeholder="enter your email id"><br>
+    <input id ="second" type="text" placeholder="enter your password"><br>
+    <input id = "third" type="text" placeholder="enter your name"><br>
+    <input type="button" onclick="work()" value="click me">
+    <h2 id ="registered succesfully"></h2>
+    
+</body>
+</html>
