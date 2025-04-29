@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <style>
+        .info{
+            border: 5px solid brown;
+            width: 40%;
+            height: 40vh;
+        }
+        #msg{
+            height: 30vh;
+        }
+        #input_msg{
+            height: 10vh;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div id ="msg"></div>
+        <textarea placeholder="enter your msg" id="input_msg"></textarea>
+        <button>send</button>
+        
+    </div>
+
+     <script>
+        let message=[];
+        document.querySelector("button").addEventListener("click",()=>{
+            let text = document.querySelector("textarea");
+            let msglist = document.querySelector("#msg");
+            let type = `<div>${text.value}</div>`;
+            msglist.insertAdjacentHTML("beforebegin",type);
+            
+        });
+    </script> -->
+
+
+
+
+
+
+    <style>
+        .info {
+            border: 5px solid brown;
+            width: 40%;
+            height: 40vh;
+            padding: 10px;
+        }
+        #msg {
+            height: 30vh;
+            overflow:auto;
+        }
+        #input_msg {
+            height: 10vh;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div id="msg"></div>
+        <textarea placeholder="Enter your message" id="input_msg"></textarea>
+        <button>Send</button>
+    </div>
+
+    <script>
+        // Array to store messages
+        let messages = [];
+
+        // Event listener for the "Send" button
+        document.querySelector("button").addEventListener("click", () => {
+            let text = document.querySelector("#input_msg");
+            let msglist = document.querySelector("#msg");
+
+            // Get the message typed by the user
+            let newMessage = text.value;
+
+            // Add message to the array if it's not empty
+            if (newMessage !== '') {
+                messages.push(newMessage);
+                text.value = ''; // Clear the input field
+            }
+
+            // Clear the current messages and display all messages from the array 
+            msglist.innerHTML = '';  // Clear the message display
+            for (let i = 0; i < messages.length; i++) {
+                // Create a new div for each message
+                let messageDiv = document.createElement('div');
+                messageDiv.textContent = messages[i];
+                msglist.appendChild(messageDiv);
+            }
+        });
+    </script>
+</body>
+</html>
+       
+            
+        
+        
+
+    </script>
+    
+</body>
+</html>
