@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Document</title>
+    <script>
+        async function movie(){
+            let show = await fetch ("https://www.apirequest.in/movie/api",{"method":"get"});
+             let result_show = await show.json();
+            if(show.ok){
+              console.log(result_show);
+              createHTMLdata(result_show);
+                 }else{
+                alert("error while calling server");
+             }
+             
+        }
+        function createHTMLdata(movielist){
+            let data='';
+            for(let see in movielist){
+                // console.log(movielist[see]['title']);
+            
+         data = data +`   
+        <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="${movielist[see]['Images'][0]}" alt="...">
+     <div class="card-body">
+    <h5 class="card-title">${movielist[see]['actors']}</h5>
+    <p class="card-text">${movielist[see]['title']}</p>
+
+  </div>
+</div>
+`;
+ document.querySelector("#one").innerHTML=data;
+        
+
+
+        }
+
+
+    }
+
+
+
+        
+
+        
+    </script>
+</head>
+<body>
+    <input type="button" onclick="movie()" value="click me">
+    <div id="one">
+    
+    </div>
+    
+</body>
+</html>
