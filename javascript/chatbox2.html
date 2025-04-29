@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .info{
+            border: 5px solid grey;
+            height: 45vh;
+            width: 40%;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+        #msg{
+            height: 30vh;
+            
+        }
+        #input_msg{
+            height: 10vh;
+            width: 60%;
+            border: 8px solid antiquewhite;
+            border-radius: 15px;
+            
+        }
+        button{
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class = info>
+        <div id = msg></div>
+        <textarea placeholder="enter your msg" id="input_msg" ></textarea>
+        <button>send</button>
+    </div>
+    <script>
+        let messages = []; // array to store messages
+
+        
+        document.querySelector("button").addEventListener("click",()=>{ // even listener for the send button
+            let text = document.querySelector("#input_msg");
+            let show = document.querySelector("#msg");
+
+            let newMessage = text.value;  // Get the message typed by the user
+
+// Check if message is not empty (not just spaces)
+            if(newMessage !==''){  
+                messages.push(newMessage);   // Add message to the array if it's not empty
+                text.value=''; // Clear the input field
+            }
+            // Clear the current messages and display all messages from the array 
+             show.innerHTML = ''; // Clear the message display
+             for (let i = 0; i < messages.length; i++) {
+                // Create a new div for each message
+                let messageDiv = document.createElement('div');   // Every time the user sends a message, we want to show it separately on the screen.
+                messageDiv.textContent = messages[i];               //To do that, we create a new container (div) for each message.
+                show.appendChild(messageDiv);                      //Then we add the message to it, and show it inside the message area.
+            }
+        });
+ 
+
+                                                                   
+    </script>
+</body>
+</html>
