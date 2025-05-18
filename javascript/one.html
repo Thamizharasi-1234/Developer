@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+    .red {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="myText">Hello, Ocean Queen!</h2>
+  <button onclick="addClass()">Add</button>
+  <button onclick="removeClass()">Remove</button>
+  <button onclick="toggleClass()">Toggle</button>
+  <button onclick="checkClass()">Check</button>
+
+  <script>
+    let text = document.getElementById("myText");
+
+    function addClass() {
+      text.classList.add("highlight");
+      // Output: background becomes yellow
+    }
+
+    function removeClass() {
+      text.classList.remove("highlight");
+      // Output: background becomes normal
+    }
+
+    function toggleClass() {
+      text.classList.toggle("red");
+      // Output: Text becomes red (toggle ON)
+      // If clicked again: Text becomes normal (toggle OFF)
+    }
+
+    function checkClass() {
+      if (text.classList.contains("red")) {
+        alert("Red class is PRESENT");
+      } else {
+        alert("Red class is NOT present");
+      }
+    }
+  </script>
+
+</body>
+</html>
